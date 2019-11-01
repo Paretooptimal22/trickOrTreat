@@ -73,19 +73,27 @@ const inquirer = require(`inquirer`)
 const mysql = require(`mysql2`)
 
 let userCandy = 0
-// let timer = 0
+// An asynchronous timer  
+function startCountDown(seconds) {
+  let counter = seconds
+  let interval = setInterval(() => {
+    // console.log(counter)
+    counter--
+    if (counter < 0) {
+      // code here will run when the counter reaches zero.
+      clearInterval(interval)
+      console.log('Time up!')
+    }
 
-// const countDown =_=>{
- 
-//     if(timer < 60){
+    if(counter === 20){
+      console.log('You have 20 seconds left')
+    }else if(counter === 40 ){
+      console.log('You have 40 seconds left!')
+    }
+  }, 1000)
+}
 
-//     setTimeout(() => {
-//      timer++
-//       console.log(`${timer}`)
-//     }, 1000);
 
-//     }
-//   }
 //functions to run
 const knock =_=>{
   let mark = Math.floor(Math.random()* 101)
@@ -126,6 +134,7 @@ inquirer
     switch(userChoice){
       case `KNOCK-KNOCK TRICK-OR-TREAT!`:
         knock()
+        startCountDown(60)
         break
 
       case `RUN AWAY!`:

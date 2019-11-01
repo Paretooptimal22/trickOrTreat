@@ -48,4 +48,15 @@ inquirer.prompt([
             }
         })
   })
+  .then(choices => {
+      console.log(choices)
+        if(choices.option === 'View Leaderboard'){
+            inquirer
+                .prompt([{
+                    type: '',
+                    name: '',
+                    message: ''
+                }])
+        }
+  })
   .catch(err => console.log(err))

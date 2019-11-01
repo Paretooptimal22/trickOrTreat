@@ -73,19 +73,19 @@ const inquirer = require(`inquirer`)
 const mysql = require(`mysql2`)
 
 let userCandy = 0
-let timer = 0
+// let timer = 0
 
-const countDown =_=>{
+// const countDown =_=>{
  
-    if(timer < 60){
+//     if(timer < 60){
 
-    setTimeout(() => {
-     timer++
-      console.log(`${timer}`)
-    }, 1000);
+//     setTimeout(() => {
+//      timer++
+//       console.log(`${timer}`)
+//     }, 1000);
 
-    }
-  }
+//     }
+//   }
 //functions to run
 const knock =_=>{
   let mark = Math.floor(Math.random()* 101)
@@ -99,7 +99,9 @@ const knock =_=>{
   }else if (mark > 50){
     userCandy+= candy
   }else if(userCandy <= 0 || timer === 0){
-    console.log('You lost')
+    console.log(`This is your candy count ${userCandy}`)
+  //send to record menu
+    
   }
 }
 
@@ -124,11 +126,10 @@ inquirer
     switch(userChoice){
       case `KNOCK-KNOCK TRICK-OR-TREAT!`:
         knock()
-        countDown()
         break
 
       case `RUN AWAY!`:
-        run-blsh 
+        //send to record menu
         break
       }
     console.log(answers.choices)

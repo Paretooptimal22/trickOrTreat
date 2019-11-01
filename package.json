@@ -1,0 +1,24 @@
+{
+  "name": "trickOrTreat",
+  "version": "1.0.0",
+  "description": "Your task is to build a game where a user has 1 minute to Trick Or Treat at as many houses as they can to try and collect the most candy.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paretooptimal22/trickOrTreat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paretooptimal22/trickOrTreat/issues"
+  },
+  "homepage": "https://github.com/Paretooptimal22/trickOrTreat#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "mysql2": "^2.0.0"
+  }
+}

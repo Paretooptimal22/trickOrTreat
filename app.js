@@ -34,7 +34,6 @@ function startCountDown(seconds) {
       clearInterval(interval)
       console.log('Time up!')
     }
-
     if(counter === 20){
       console.log('You have 20 seconds left')
     }else if(counter === 40 ){
@@ -63,7 +62,7 @@ const knock =_=>{
   }
 }
 
-
+const mainGame =()=>{ 
 inquirer
   .prompt([
 
@@ -94,7 +93,7 @@ inquirer
     console.log(answers.choices)
   });
 
-
+}
 
 
 

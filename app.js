@@ -27,23 +27,7 @@ inquirer
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// main menu - Cal Travis
+  // main menu - Cal Travis
 inquirer.prompt([
     {
       type: 'list',
@@ -53,16 +37,16 @@ inquirer.prompt([
     }
   ])
   .then(choices => {
-    console.log(choices)
-        if(choices.option === 'Trick or Treat'){
-            inquirer
-                .prompt([{
-                    type: '',
-                    name: '',
-                    message: ''
-                }])
-            }
-        })
+    if(choices.option === 'Trick or Treat'){
+        // Cyd and Sabrina functions goes here
+
+    }
+    if(choices.option === 'View Leaderboard'){
+
+    }
+    if(choices.option === 'Exit Game'){
+
+    }
   })
   .then(choices => {
       console.log(choices)
